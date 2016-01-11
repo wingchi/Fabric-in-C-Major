@@ -7,12 +7,22 @@
 //
 
 #import "ViewController.h"
+#import <TwitterKit/TwitterKit.h>
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+- (IBAction)twitterLoginAction:(UIButton *)sender {
+    [[Twitter sharedInstance] logInWithCompletion:^(TWTRSession *session, NSError *error) {
+        if (session) {
+            NSLog(@"signed in as %@", [session userName]);
+        } else {
+            NSLog(@"error: %@", [error localizedDescription]);
+        }
+    }];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

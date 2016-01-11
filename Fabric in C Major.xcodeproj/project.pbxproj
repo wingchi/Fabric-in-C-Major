@@ -13,6 +13,12 @@
 		0CE7E9931C442CB900099C59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CE7E9911C442CB900099C59 /* Main.storyboard */; };
 		0CE7E9951C442CB900099C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CE7E9941C442CB900099C59 /* Assets.xcassets */; };
 		0CE7E9981C442CB900099C59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CE7E9961C442CB900099C59 /* LaunchScreen.storyboard */; };
+		0CE7E9A41C442E2700099C59 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE7E9A01C442E2700099C59 /* Fabric.framework */; };
+		0CE7E9A51C442E2700099C59 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE7E9A11C442E2700099C59 /* TwitterKit.framework */; };
+		0CE7E9A61C442E2700099C59 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0CE7E9A21C442E2700099C59 /* TwitterKitResources.bundle */; };
+		0CE7E9A71C442E2700099C59 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE7E9A31C442E2700099C59 /* TwitterCore.framework */; };
+		0CE7E9AB1C44341000099C59 /* HomeTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7E9A91C44341000099C59 /* HomeTimelineViewController.m */; };
+		0CE7E9AC1C44341000099C59 /* HomeTimelineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE7E9AA1C44341000099C59 /* HomeTimelineViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,13 @@
 		0CE7E9941C442CB900099C59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CE7E9971C442CB900099C59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0CE7E9991C442CB900099C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CE7E9A01C442E2700099C59 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		0CE7E9A11C442E2700099C59 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		0CE7E9A21C442E2700099C59 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
+		0CE7E9A31C442E2700099C59 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
+		0CE7E9A81C44341000099C59 /* HomeTimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTimelineViewController.h; sourceTree = "<group>"; };
+		0CE7E9A91C44341000099C59 /* HomeTimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTimelineViewController.m; sourceTree = "<group>"; };
+		0CE7E9AA1C44341000099C59 /* HomeTimelineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTimelineViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +46,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CE7E9A41C442E2700099C59 /* Fabric.framework in Frameworks */,
+				0CE7E9A71C442E2700099C59 /* TwitterCore.framework in Frameworks */,
+				0CE7E9A51C442E2700099C59 /* TwitterKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +60,10 @@
 			children = (
 				0CE7E9871C442CB900099C59 /* Fabric in C Major */,
 				0CE7E9861C442CB900099C59 /* Products */,
+				0CE7E9A01C442E2700099C59 /* Fabric.framework */,
+				0CE7E9A11C442E2700099C59 /* TwitterKit.framework */,
+				0CE7E9A21C442E2700099C59 /* TwitterKitResources.bundle */,
+				0CE7E9A31C442E2700099C59 /* TwitterCore.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +83,9 @@
 				0CE7E98E1C442CB900099C59 /* ViewController.h */,
 				0CE7E98F1C442CB900099C59 /* ViewController.m */,
 				0CE7E9911C442CB900099C59 /* Main.storyboard */,
+				0CE7E9A81C44341000099C59 /* HomeTimelineViewController.h */,
+				0CE7E9A91C44341000099C59 /* HomeTimelineViewController.m */,
+				0CE7E9AA1C44341000099C59 /* HomeTimelineViewController.xib */,
 				0CE7E9941C442CB900099C59 /* Assets.xcassets */,
 				0CE7E9961C442CB900099C59 /* LaunchScreen.storyboard */,
 				0CE7E9991C442CB900099C59 /* Info.plist */,
@@ -89,6 +112,7 @@
 				0CE7E9811C442CB900099C59 /* Sources */,
 				0CE7E9821C442CB900099C59 /* Frameworks */,
 				0CE7E9831C442CB900099C59 /* Resources */,
+				0CE7E99F1C442E0300099C59 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -136,13 +160,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CE7E9A61C442E2700099C59 /* TwitterKitResources.bundle in Resources */,
 				0CE7E9981C442CB900099C59 /* LaunchScreen.storyboard in Resources */,
 				0CE7E9951C442CB900099C59 /* Assets.xcassets in Resources */,
+				0CE7E9AC1C44341000099C59 /* HomeTimelineViewController.xib in Resources */,
 				0CE7E9931C442CB900099C59 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CE7E99F1C442E0300099C59 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run a59226da513a6553ed8a5efe6517157d94400719 aac1c55bd5cce06974be6e1d0929b26cd6d184f977c38b2f7ddee19dfc7dedfd";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0CE7E9811C442CB900099C59 /* Sources */ = {
@@ -151,6 +193,7 @@
 			files = (
 				0CE7E9901C442CB900099C59 /* ViewController.m in Sources */,
 				0CE7E98D1C442CB900099C59 /* AppDelegate.m in Sources */,
+				0CE7E9AB1C44341000099C59 /* HomeTimelineViewController.m in Sources */,
 				0CE7E98A1C442CB900099C59 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +306,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Fabric in C Major/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wingchi.Fabric-in-C-Major";
@@ -274,6 +321,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Fabric in C Major/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wingchi.Fabric-in-C-Major";
