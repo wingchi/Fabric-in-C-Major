@@ -7,6 +7,7 @@
 //
 
 #import "TimelineTableViewController.h"
+#import <TwitterKit/TwitterKit.h>
 
 @interface TimelineTableViewController ()
 
@@ -16,6 +17,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSString *userID = [Twitter sharedInstance].sessionStore.session.userID;
+    TWTRAPIClient *client = [[TWTRAPIClient alloc] initWithUserID:userID];
+    NSString *statusesShowEndpoint = @"https://api.twitter.com/1.1/statuses/home_timeline.json";
+    NSError *clientError;
+    
+    NSURLRequest *request = [[[Twitter sharedInstance] APIClient] URLRequestWithMethod:@"GET" URL:statusesShowEndpoint parameters:nil error:&clientError];
+    
+    if (request) {
+        [client sendTwitterRequest:request completion:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+            if (data) {
+                NSError *jsonError;
+                NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+                NSLog(@"JSON: %@", json);
+            }
+            else {
+                NSLog(@"Error: %@", connectionError);
+            }
+        }];
+    }
+    else {
+        NSLog(@"Error: %@", clientError);
+    }
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
