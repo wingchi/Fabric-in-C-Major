@@ -1,5 +1,5 @@
 //
-//  HomeTimelineViewController.h
+//  TimelineTableViewController.h
 //  Fabric in C Major
 //
 //  Created by Stephen Wong on 1/11/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeTimelineViewController : UIViewController
+@interface TimelineTableViewController : UITableViewController
 
 @end

@@ -15,10 +15,10 @@
 		0CE7E9A51C442E2700099C59 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE7E9A11C442E2700099C59 /* TwitterKit.framework */; };
 		0CE7E9A61C442E2700099C59 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0CE7E9A21C442E2700099C59 /* TwitterKitResources.bundle */; };
 		0CE7E9A71C442E2700099C59 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE7E9A31C442E2700099C59 /* TwitterCore.framework */; };
-		0CE7E9AB1C44341000099C59 /* HomeTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7E9A91C44341000099C59 /* HomeTimelineViewController.m */; };
-		0CE7E9AC1C44341000099C59 /* HomeTimelineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE7E9AA1C44341000099C59 /* HomeTimelineViewController.xib */; };
 		0CE7E9B01C44387B00099C59 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7E9AE1C44387B00099C59 /* LoginViewController.m */; };
 		0CE7E9B11C44387B00099C59 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE7E9AF1C44387B00099C59 /* LoginViewController.xib */; };
+		0CE7E9B51C444A2800099C59 /* TimelineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7E9B31C444A2800099C59 /* TimelineTableViewController.m */; };
+		0CE7E9B61C444A2800099C59 /* TimelineTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE7E9B41C444A2800099C59 /* TimelineTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,12 +33,12 @@
 		0CE7E9A11C442E2700099C59 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
 		0CE7E9A21C442E2700099C59 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		0CE7E9A31C442E2700099C59 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
-		0CE7E9A81C44341000099C59 /* HomeTimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTimelineViewController.h; sourceTree = "<group>"; };
-		0CE7E9A91C44341000099C59 /* HomeTimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTimelineViewController.m; sourceTree = "<group>"; };
-		0CE7E9AA1C44341000099C59 /* HomeTimelineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTimelineViewController.xib; sourceTree = "<group>"; };
 		0CE7E9AD1C44387B00099C59 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		0CE7E9AE1C44387B00099C59 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		0CE7E9AF1C44387B00099C59 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		0CE7E9B21C444A2800099C59 /* TimelineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineTableViewController.h; sourceTree = "<group>"; };
+		0CE7E9B31C444A2800099C59 /* TimelineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineTableViewController.m; sourceTree = "<group>"; };
+		0CE7E9B41C444A2800099C59 /* TimelineTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +58,9 @@
 		0CE7E97C1C442CB900099C59 = {
 			isa = PBXGroup;
 			children = (
+				0CE7E9B21C444A2800099C59 /* TimelineTableViewController.h */,
+				0CE7E9B31C444A2800099C59 /* TimelineTableViewController.m */,
+				0CE7E9B41C444A2800099C59 /* TimelineTableViewController.xib */,
 				0CE7E9871C442CB900099C59 /* Fabric in C Major */,
 				0CE7E9861C442CB900099C59 /* Products */,
 				0CE7E9A01C442E2700099C59 /* Fabric.framework */,
@@ -83,9 +86,6 @@
 				0CE7E9AD1C44387B00099C59 /* LoginViewController.h */,
 				0CE7E9AE1C44387B00099C59 /* LoginViewController.m */,
 				0CE7E9AF1C44387B00099C59 /* LoginViewController.xib */,
-				0CE7E9A81C44341000099C59 /* HomeTimelineViewController.h */,
-				0CE7E9A91C44341000099C59 /* HomeTimelineViewController.m */,
-				0CE7E9AA1C44341000099C59 /* HomeTimelineViewController.xib */,
 				0CE7E9941C442CB900099C59 /* Assets.xcassets */,
 				0CE7E9961C442CB900099C59 /* LaunchScreen.storyboard */,
 				0CE7E9991C442CB900099C59 /* Info.plist */,
@@ -162,9 +162,9 @@
 			files = (
 				0CE7E9A61C442E2700099C59 /* TwitterKitResources.bundle in Resources */,
 				0CE7E9981C442CB900099C59 /* LaunchScreen.storyboard in Resources */,
+				0CE7E9B61C444A2800099C59 /* TimelineTableViewController.xib in Resources */,
 				0CE7E9B11C44387B00099C59 /* LoginViewController.xib in Resources */,
 				0CE7E9951C442CB900099C59 /* Assets.xcassets in Resources */,
-				0CE7E9AC1C44341000099C59 /* HomeTimelineViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,8 +192,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CE7E98D1C442CB900099C59 /* AppDelegate.m in Sources */,
-				0CE7E9AB1C44341000099C59 /* HomeTimelineViewController.m in Sources */,
 				0CE7E98A1C442CB900099C59 /* main.m in Sources */,
+				0CE7E9B51C444A2800099C59 /* TimelineTableViewController.m in Sources */,
 				0CE7E9B01C44387B00099C59 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
