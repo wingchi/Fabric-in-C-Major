@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <Fabric/Fabric.h>
 #import <TwitterKit/TwitterKit.h>
+#import "LoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,6 +22,14 @@
     // Override point for customization after application launch.
     [[Twitter sharedInstance] startWithConsumerKey:@"01jJy3TXaEbgcR482X6loBNPL" consumerSecret:@"akJDLBoZ7XxcdCk7SVetny8TLAPTltsU8YCWLyuiMHsKYP9NfF"];
     [Fabric with:@[[Twitter sharedInstance]]];
+    
+    LoginViewController *loginVC = [LoginViewController new];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginVC];
+    
+    CGRect screenFrame = [UIScreen mainScreen].bounds;
+    self.window = [[UIWindow alloc] initWithFrame:screenFrame];
+    self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

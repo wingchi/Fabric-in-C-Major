@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		0CE7E98A1C442CB900099C59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7E9891C442CB900099C59 /* main.m */; };
 		0CE7E98D1C442CB900099C59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7E98C1C442CB900099C59 /* AppDelegate.m */; };
-		0CE7E9901C442CB900099C59 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7E98F1C442CB900099C59 /* ViewController.m */; };
-		0CE7E9931C442CB900099C59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CE7E9911C442CB900099C59 /* Main.storyboard */; };
 		0CE7E9951C442CB900099C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CE7E9941C442CB900099C59 /* Assets.xcassets */; };
 		0CE7E9981C442CB900099C59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CE7E9961C442CB900099C59 /* LaunchScreen.storyboard */; };
 		0CE7E9A41C442E2700099C59 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE7E9A01C442E2700099C59 /* Fabric.framework */; };
@@ -19,6 +17,8 @@
 		0CE7E9A71C442E2700099C59 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE7E9A31C442E2700099C59 /* TwitterCore.framework */; };
 		0CE7E9AB1C44341000099C59 /* HomeTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7E9A91C44341000099C59 /* HomeTimelineViewController.m */; };
 		0CE7E9AC1C44341000099C59 /* HomeTimelineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE7E9AA1C44341000099C59 /* HomeTimelineViewController.xib */; };
+		0CE7E9B01C44387B00099C59 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7E9AE1C44387B00099C59 /* LoginViewController.m */; };
+		0CE7E9B11C44387B00099C59 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE7E9AF1C44387B00099C59 /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,9 +26,6 @@
 		0CE7E9891C442CB900099C59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0CE7E98B1C442CB900099C59 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0CE7E98C1C442CB900099C59 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0CE7E98E1C442CB900099C59 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0CE7E98F1C442CB900099C59 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		0CE7E9921C442CB900099C59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0CE7E9941C442CB900099C59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CE7E9971C442CB900099C59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0CE7E9991C442CB900099C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -39,6 +36,9 @@
 		0CE7E9A81C44341000099C59 /* HomeTimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTimelineViewController.h; sourceTree = "<group>"; };
 		0CE7E9A91C44341000099C59 /* HomeTimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTimelineViewController.m; sourceTree = "<group>"; };
 		0CE7E9AA1C44341000099C59 /* HomeTimelineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTimelineViewController.xib; sourceTree = "<group>"; };
+		0CE7E9AD1C44387B00099C59 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		0CE7E9AE1C44387B00099C59 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		0CE7E9AF1C44387B00099C59 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +80,9 @@
 			children = (
 				0CE7E98B1C442CB900099C59 /* AppDelegate.h */,
 				0CE7E98C1C442CB900099C59 /* AppDelegate.m */,
-				0CE7E98E1C442CB900099C59 /* ViewController.h */,
-				0CE7E98F1C442CB900099C59 /* ViewController.m */,
-				0CE7E9911C442CB900099C59 /* Main.storyboard */,
+				0CE7E9AD1C44387B00099C59 /* LoginViewController.h */,
+				0CE7E9AE1C44387B00099C59 /* LoginViewController.m */,
+				0CE7E9AF1C44387B00099C59 /* LoginViewController.xib */,
 				0CE7E9A81C44341000099C59 /* HomeTimelineViewController.h */,
 				0CE7E9A91C44341000099C59 /* HomeTimelineViewController.m */,
 				0CE7E9AA1C44341000099C59 /* HomeTimelineViewController.xib */,
@@ -162,9 +162,9 @@
 			files = (
 				0CE7E9A61C442E2700099C59 /* TwitterKitResources.bundle in Resources */,
 				0CE7E9981C442CB900099C59 /* LaunchScreen.storyboard in Resources */,
+				0CE7E9B11C44387B00099C59 /* LoginViewController.xib in Resources */,
 				0CE7E9951C442CB900099C59 /* Assets.xcassets in Resources */,
 				0CE7E9AC1C44341000099C59 /* HomeTimelineViewController.xib in Resources */,
-				0CE7E9931C442CB900099C59 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,24 +191,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CE7E9901C442CB900099C59 /* ViewController.m in Sources */,
 				0CE7E98D1C442CB900099C59 /* AppDelegate.m in Sources */,
 				0CE7E9AB1C44341000099C59 /* HomeTimelineViewController.m in Sources */,
 				0CE7E98A1C442CB900099C59 /* main.m in Sources */,
+				0CE7E9B01C44387B00099C59 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0CE7E9911C442CB900099C59 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0CE7E9921C442CB900099C59 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0CE7E9961C442CB900099C59 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
