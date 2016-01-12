@@ -11,5 +11,6 @@
 @interface TimelineTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *userLabel;
 @property (weak, nonatomic) IBOutlet UILabel *tweetLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *userImage;
 
 @end

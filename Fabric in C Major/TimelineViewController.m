@@ -18,7 +18,7 @@
 @implementation TimelineViewController
 
     NSString *timelineTableViewCellIdentifier = @"timelineCell";
-    NSDictionary *responseJson;
+    NSArray *responseJson;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -43,7 +43,8 @@
             if (data) {
                 NSError *jsonError;
                 responseJson = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
-                NSLog(@"JSON: %@", responseJson);
+                [self.timelineTableView reloadData];
+//                NSLog(@"JSON: %@", responseJson);
                 
                 
             }
@@ -76,16 +77,46 @@
     return 5;
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView
+- (UITableViewCell *)tableView:(UITableView *)tableView
         cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TimelineTableViewCell *cell = [tableView
-                             dequeueReusableCellWithIdentifier:timelineTableViewCellIdentifier forIndexPath:indexPath];
-    
-    cell.userLabel.text = @"username";
-    cell.tweetLabel.text = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ante libero, porttitor in ipsum eget, efficitur egestas enim. Maecenas sed.";
-    
-    return cell;
+                                   dequeueReusableCellWithIdentifier:timelineTableViewCellIdentifier forIndexPath:indexPath];
+    if (responseJson == nil)
+        return cell;
+    else
+        return [self populateCell:indexPath];
+}
+
+- (TimelineTableViewCell *)populateCell:(NSIndexPath *)indexPath
+{
+    TimelineTableViewCell *tableCell = [self.timelineTableView
+                                   dequeueReusableCellWithIdentifier:timelineTableViewCellIdentifier forIndexPath:indexPath];
+    NSDictionary *tweet = responseJson[indexPath.row];
+    NSDictionary *user = [tweet objectForKey: @"user"];
+    tableCell.userLabel.text = [user objectForKey: @"screen_name"];
+    tableCell.tweetLabel.text = [tweet objectForKey: @"text"];
+//    NSString *profileUrl = [(NSString *)[user objectForKey:@"profile_image_url"] stringByAddingPercentEncodingWithAllowedCharacters:NSASCIIStringEncoding];
+    NSLog(@"%@", user[@"profile_image_url"]);
+    if (user[@"profile_image_url"] != nil) {
+//        NSData *userImageData = [[NSData alloc] initWithContentsOfURL: [user objectForKey:@"profile_image_url"]];
+//        tableCell.userImage.image = [UIImage imageWithData: userImageData];
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            NSString *profileImageUrlString = user[@"profile_image_url_https"];
+            NSURL *profileImageUrl = [NSURL URLWithString:profileImageUrlString];
+            NSData *userImageData = [[NSData alloc] initWithContentsOfURL:profileImageUrl];
+            if (userImageData == nil) {
+                return;
+            }
+            dispatch_async(dispatch_get_main_queue(), ^{
+                tableCell.userImage.backgroundColor = [UIColor orangeColor];
+                UIImage *image = [UIImage imageWithData: userImageData];
+                tableCell.userImage.image = image;
+            });
+        });
+    }
+    return tableCell;
 }
 
 /*
