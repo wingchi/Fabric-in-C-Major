@@ -59,7 +59,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    _timelineTableView.hidden = false;
+    [self showVisibleCells];
 }
 
 /*
@@ -74,7 +74,7 @@
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return [responseJson count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -117,6 +117,22 @@
         });
     }
     return tableCell;
+}
+
+/*
+#pragma mark - Animation
+*/
+
+- (void)showVisibleCells
+{
+    self.timelineTableView.hidden = false;
+    
+    NSArray *cells = [_timelineTableView visibleCells];
+    
+    for (TimelineTableViewCell * cell in cells) {
+        cell.transform = CGAffineTransformMakeTranslation(0, _timelineTableView.bounds.size.height);
+    }
+    
 }
 
 /*
