@@ -17,10 +17,10 @@
 		0CE7E9A71C442E2700099C59 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE7E9A31C442E2700099C59 /* TwitterCore.framework */; };
 		0CE7E9B01C44387B00099C59 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7E9AE1C44387B00099C59 /* LoginViewController.m */; };
 		0CE7E9B11C44387B00099C59 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE7E9AF1C44387B00099C59 /* LoginViewController.xib */; };
-		0CE7E9B51C444A2800099C59 /* TimelineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7E9B31C444A2800099C59 /* TimelineTableViewController.m */; };
-		0CE7E9B61C444A2800099C59 /* TimelineTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE7E9B41C444A2800099C59 /* TimelineTableViewController.xib */; };
 		0CE7E9BA1C4450BF00099C59 /* TimelineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7E9B81C4450BF00099C59 /* TimelineTableViewCell.m */; };
 		0CE7E9BB1C4450BF00099C59 /* TimelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE7E9B91C4450BF00099C59 /* TimelineTableViewCell.xib */; };
+		0CE7E9BF1C4453C200099C59 /* TimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7E9BD1C4453C200099C59 /* TimelineViewController.m */; };
+		0CE7E9C01C4453C200099C59 /* TimelineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE7E9BE1C4453C200099C59 /* TimelineViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,12 +38,12 @@
 		0CE7E9AD1C44387B00099C59 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		0CE7E9AE1C44387B00099C59 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		0CE7E9AF1C44387B00099C59 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		0CE7E9B21C444A2800099C59 /* TimelineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimelineTableViewController.h; path = ../TimelineTableViewController.h; sourceTree = "<group>"; };
-		0CE7E9B31C444A2800099C59 /* TimelineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimelineTableViewController.m; path = ../TimelineTableViewController.m; sourceTree = "<group>"; };
-		0CE7E9B41C444A2800099C59 /* TimelineTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TimelineTableViewController.xib; path = ../TimelineTableViewController.xib; sourceTree = "<group>"; };
 		0CE7E9B71C4450BF00099C59 /* TimelineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineTableViewCell.h; sourceTree = "<group>"; };
 		0CE7E9B81C4450BF00099C59 /* TimelineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineTableViewCell.m; sourceTree = "<group>"; };
 		0CE7E9B91C4450BF00099C59 /* TimelineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineTableViewCell.xib; sourceTree = "<group>"; };
+		0CE7E9BC1C4453C200099C59 /* TimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineViewController.h; sourceTree = "<group>"; };
+		0CE7E9BD1C4453C200099C59 /* TimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineViewController.m; sourceTree = "<group>"; };
+		0CE7E9BE1C4453C200099C59 /* TimelineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,12 +88,12 @@
 				0CE7E9AD1C44387B00099C59 /* LoginViewController.h */,
 				0CE7E9AE1C44387B00099C59 /* LoginViewController.m */,
 				0CE7E9AF1C44387B00099C59 /* LoginViewController.xib */,
-				0CE7E9B21C444A2800099C59 /* TimelineTableViewController.h */,
-				0CE7E9B31C444A2800099C59 /* TimelineTableViewController.m */,
+				0CE7E9BC1C4453C200099C59 /* TimelineViewController.h */,
+				0CE7E9BD1C4453C200099C59 /* TimelineViewController.m */,
+				0CE7E9BE1C4453C200099C59 /* TimelineViewController.xib */,
 				0CE7E9B71C4450BF00099C59 /* TimelineTableViewCell.h */,
 				0CE7E9B81C4450BF00099C59 /* TimelineTableViewCell.m */,
 				0CE7E9B91C4450BF00099C59 /* TimelineTableViewCell.xib */,
-				0CE7E9B41C444A2800099C59 /* TimelineTableViewController.xib */,
 				0CE7E9941C442CB900099C59 /* Assets.xcassets */,
 				0CE7E9961C442CB900099C59 /* LaunchScreen.storyboard */,
 				0CE7E9991C442CB900099C59 /* Info.plist */,
@@ -169,8 +169,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CE7E9A61C442E2700099C59 /* TwitterKitResources.bundle in Resources */,
+				0CE7E9C01C4453C200099C59 /* TimelineViewController.xib in Resources */,
 				0CE7E9981C442CB900099C59 /* LaunchScreen.storyboard in Resources */,
-				0CE7E9B61C444A2800099C59 /* TimelineTableViewController.xib in Resources */,
 				0CE7E9B11C44387B00099C59 /* LoginViewController.xib in Resources */,
 				0CE7E9BB1C4450BF00099C59 /* TimelineTableViewCell.xib in Resources */,
 				0CE7E9951C442CB900099C59 /* Assets.xcassets in Resources */,
@@ -202,9 +202,9 @@
 			files = (
 				0CE7E98D1C442CB900099C59 /* AppDelegate.m in Sources */,
 				0CE7E98A1C442CB900099C59 /* main.m in Sources */,
-				0CE7E9B51C444A2800099C59 /* TimelineTableViewController.m in Sources */,
 				0CE7E9BA1C4450BF00099C59 /* TimelineTableViewCell.m in Sources */,
 				0CE7E9B01C44387B00099C59 /* LoginViewController.m in Sources */,
+				0CE7E9BF1C4453C200099C59 /* TimelineViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

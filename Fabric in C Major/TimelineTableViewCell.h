@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface TimelineTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *userLabel;
+@property (weak, nonatomic) IBOutlet UILabel *tweetLabel;
 
 @end

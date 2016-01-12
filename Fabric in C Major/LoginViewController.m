@@ -8,7 +8,7 @@
 
 #import "LoginViewController.h"
 #import <TwitterKit/TwitterKit.h>
-#import "TimelineTableViewController.h"
+#import "TimelineViewController.h"
 
 @interface LoginViewController ()
 
@@ -20,7 +20,7 @@
     [[Twitter sharedInstance] logInWithCompletion:^(TWTRSession *session, NSError *error) {
         if (session) {
             NSLog(@"signed in as %@", [session userName]);
-            TimelineTableViewController *homeTimelineVC = [[TimelineTableViewController alloc] init];
+            TimelineViewController *homeTimelineVC = [[TimelineViewController alloc] init];
             [self presentViewController:homeTimelineVC animated:TRUE completion:nil];
         } else {
             NSLog(@"error: %@", [error localizedDescription]);
