@@ -98,7 +98,7 @@
     tableCell.tweetLabel.text = [tweet objectForKey: @"text"];
 //    NSString *profileUrl = [(NSString *)[user objectForKey:@"profile_image_url"] stringByAddingPercentEncodingWithAllowedCharacters:NSASCIIStringEncoding];
     NSLog(@"%@", user[@"profile_image_url"]);
-    if (user[@"profile_image_url"] != nil) {
+    if (user[@"profile_image_url"] != nil && tableCell.userImage.image == nil) {
 //        NSData *userImageData = [[NSData alloc] initWithContentsOfURL: [user objectForKey:@"profile_image_url"]];
 //        tableCell.userImage.image = [UIImage imageWithData: userImageData];
         
