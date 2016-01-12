@@ -23,6 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.timelineTableView.hidden=true;
+    
     UINib *timelineCellNib = [UINib nibWithNibName: @"TimelineTableViewCell" bundle:nil];
     
     [self.timelineTableView registerNib:timelineCellNib forCellReuseIdentifier:timelineTableViewCellIdentifier];
@@ -93,9 +95,9 @@
     TimelineTableViewCell *tableCell = [self.timelineTableView
                                    dequeueReusableCellWithIdentifier:timelineTableViewCellIdentifier forIndexPath:indexPath];
     NSDictionary *tweet = responseJson[indexPath.row];
-    NSDictionary *user = [tweet objectForKey: @"user"];
-    tableCell.userLabel.text = [user objectForKey: @"screen_name"];
-    tableCell.tweetLabel.text = [tweet objectForKey: @"text"];
+    NSDictionary *user = tweet[@"user"];
+    tableCell.userLabel.text = user[@"screen_name"];
+    tableCell.tweetLabel.text = tweet[@"text"];
 //    NSString *profileUrl = [(NSString *)[user objectForKey:@"profile_image_url"] stringByAddingPercentEncodingWithAllowedCharacters:NSASCIIStringEncoding];
     NSLog(@"%@", user[@"profile_image_url"]);
     if (user[@"profile_image_url"] != nil && tableCell.userImage.image == nil) {
@@ -125,12 +127,21 @@
 
 - (void)showVisibleCells
 {
-    self.timelineTableView.hidden = false;
-    
-    NSArray *cells = [_timelineTableView visibleCells];
-    
+    NSArray *cells = _timelineTableView.visibleCells;
     for (TimelineTableViewCell * cell in cells) {
         cell.transform = CGAffineTransformMakeTranslation(0, _timelineTableView.bounds.size.height);
+    }
+    self.timelineTableView.hidden = false;
+    for (int index = 0; index < _timelineTableView.visibleCells.count; ++index) {
+        double delay = pow((NSTimeInterval)index, 1.5) * 0.05;
+        UITableViewCell *cell = _timelineTableView.visibleCells[index];
+        
+        [UIView animateWithDuration:0.5
+                              delay:delay
+                            options:UIViewAnimationOptionCurveEaseOut
+                         animations:^{
+                             cell.transform = CGAffineTransformIdentity;
+        } completion:nil];
     }
     
 }
