@@ -12,13 +12,13 @@
 
 @interface TimelineViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *timelineTableView;
-
+@property (strong) NSMutableDictionary *twitterProfileImageArray;
+@property (strong) NSArray *responseJson;
 @end
 
 @implementation TimelineViewController
 
     NSString *timelineTableViewCellIdentifier = @"timelineCell";
-    NSArray *responseJson;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,7 +44,8 @@
         [client sendTwitterRequest:request completion:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
             if (data) {
                 NSError *jsonError;
-                responseJson = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+                _twitterProfileImageArray = [[NSMutableDictionary alloc] init];
+                _responseJson = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
                 [self.timelineTableView reloadData];
 //                NSLog(@"JSON: %@", responseJson);
                 
@@ -76,7 +77,7 @@
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    return [responseJson count];
+    return [_responseJson count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -84,7 +85,7 @@
 {
     TimelineTableViewCell *cell = [tableView
                                    dequeueReusableCellWithIdentifier:timelineTableViewCellIdentifier forIndexPath:indexPath];
-    if (responseJson == nil)
+    if (_responseJson == nil)
         return cell;
     else
         return [self populateCell:indexPath];
@@ -94,17 +95,12 @@
 {
     TimelineTableViewCell *tableCell = [self.timelineTableView
                                    dequeueReusableCellWithIdentifier:timelineTableViewCellIdentifier forIndexPath:indexPath];
-    NSDictionary *tweet = responseJson[indexPath.row];
+    NSDictionary *tweet = _responseJson[indexPath.row];
     NSDictionary *user = tweet[@"user"];
     tableCell.userLabel.text = user[@"screen_name"];
     tableCell.tweetLabel.text = tweet[@"text"];
-//    NSString *profileUrl = [(NSString *)[user objectForKey:@"profile_image_url"] stringByAddingPercentEncodingWithAllowedCharacters:NSASCIIStringEncoding];
-    NSLog(@"%@", user[@"profile_image_url"]);
-    if (user[@"profile_image_url"] != nil && tableCell.userImage.image == nil) {
-//        NSData *userImageData = [[NSData alloc] initWithContentsOfURL: [user objectForKey:@"profile_image_url"]];
-//        tableCell.userImage.image = [UIImage imageWithData: userImageData];
-        
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        if (_twitterProfileImageArray[user[@"screen_name"]] == nil) {
             NSString *profileImageUrlString = user[@"profile_image_url_https"];
             NSURL *profileImageUrl = [NSURL URLWithString:profileImageUrlString];
             NSData *userImageData = [[NSData alloc] initWithContentsOfURL:profileImageUrl];
@@ -112,12 +108,17 @@
                 return;
             }
             dispatch_async(dispatch_get_main_queue(), ^{
-                tableCell.userImage.backgroundColor = [UIColor orangeColor];
                 UIImage *image = [UIImage imageWithData: userImageData];
                 tableCell.userImage.image = image;
+                [_twitterProfileImageArray setObject:image forKey:user[@"screen_name"]];
             });
-        });
-    }
+        }
+        else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                tableCell.userImage.image = _twitterProfileImageArray[user[@"screen_name"]];
+            });
+        }
+    });
     return tableCell;
 }
 
