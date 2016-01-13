@@ -24,13 +24,10 @@
     [super viewDidLoad];
     
     self.timelineTableView.hidden=true;
-    
     UINib *timelineCellNib = [UINib nibWithNibName: @"TimelineTableViewCell" bundle:nil];
-    
     [self.timelineTableView registerNib:timelineCellNib forCellReuseIdentifier:timelineTableViewCellIdentifier];
     self.timelineTableView.delegate = self;
     self.timelineTableView.dataSource = self;
-    
     self.timelineTableView.rowHeight = UITableViewAutomaticDimension;
     self.timelineTableView.estimatedRowHeight = 160.0;
     
@@ -47,9 +44,6 @@
                 _twitterProfileImageArray = [[NSMutableDictionary alloc] init];
                 _responseJson = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
                 [self.timelineTableView reloadData];
-//                NSLog(@"JSON: %@", responseJson);
-                
-                
             }
             else {
                 NSLog(@"Error: %@", connectionError);
@@ -146,15 +140,5 @@
     }
     
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
